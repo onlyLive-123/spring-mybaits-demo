@@ -1,0 +1,15 @@
+server:
+  port: 12233
+
+#mysql
+test-mybatis:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://192.168.0.220:3306/demo_test?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+  username: root
+  password: 123456
+
+
+com.example.demo.mapper.TestMapper.selectList: select * from user_info where status = #{status}
+com.example.demo.mapper.TestMapper.selectById: select * from user_info where id = #{id}
+com.example.demo.mapper.TestMapper.update: update user_info set name =#{name} where id = #{id}
+com.example.demo.mapper.TestMapper.insert: insert into user_info(`name`,`age`,`status`) values(#{name},#{age},#{status})
